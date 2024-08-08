@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-center align-items-center h-full"
+class="{{isSignUp? 'gradient-bg' : 'gradient-bg-main'}}">
+
+  <div class="d-flex p-3 bg-light rounded-sm w-40" [ngClass]="{ 'flex-row-reverse': isSignUp }">
+    <div class="text-center bg-light w-50">
+      <!-- content -->
+      <img width="25%" src="logo.png" alt="logo" />
+
+      <!-- Input box -->
+      <div class="mx-3">
+        @for (data of loginInput; track data) {
+        <div class="my-3">
+          <app-input [details]="data"></app-input>
+        </div>
+        }
+
+        <!-- Button -->
+        <div class="my-4">
+          <app-button [details]="loginButton"></app-button>
+        </div>
+
+        <div class="">
+          <span class="text-main text-sm font-semi-bold">{{ accountText }}</span>
+          <span
+            class="mx-1 text-highlight cursor-pointer fw-bold"
+            (click)="toggleSignUp()"
+            >{{ toggleText }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="{{ isSignUp ? 'gradient-bg-main' : 'gradient-bg' }} w-50 rounded-sm">
+
+      @if (!isSignUp) {
+        <img width="100%" src="shopTogether.png" alt="shop_together" />
+      } @else {
+        <img width="100%" src="registration.png" alt="shop_together" />
+      }
+      
+      
+    </div>
+  </div>
+</div>

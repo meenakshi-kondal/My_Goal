@@ -1,0 +1,7 @@
+.d-flex {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }

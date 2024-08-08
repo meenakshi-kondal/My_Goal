@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+/* body {
+	background: linear-gradient(0deg, rgba(178, 185, 184, 1) 40%, rgba(34, 193, 195, 1) 91%);
+} */
+
+:root {
+	--primary-background: #4acdbf;
+	--secondary-background: #cee7e4;
+	--light-background: #ddf0ee;
+	--primary-text: #b2b9b8;
+	--secondary-text: #bababa;
+	--text-white: #ffffff;
+}
+
+.gradient-bg {
+	background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(178, 185, 184, 1) 64%);
+}
+
+.gradient-bg-main {
+	background: linear-gradient(0deg, rgba(178, 185, 184, 1) 40%, rgba(34, 193, 195, 1) 91%);
+}
+
+/* background properties */
+.bg-main {
+	background-color: #4acdbf;
+}
+
+.bg-main-light {
+	background-color: #cee7e4;
+}
+
+.bg-light {
+	background-color: #ffffff !important;
+}
+
+/* text properties */
+.text-main {
+	color: var(--primary-text)
+}
+
+.text-highlight {
+	color: var(--primary-background);
+}
+
+.text-mute {
+	color: var(--secondary-text)
+}
+
+.text-md {
+	font-size: 18px;
+}
+
+.text-sm {
+	font-size: 14px;
+}
+.text-lg {
+	font-size: 40px;
+}
+
+/* border properties */
+.rounded-full {
+	border-radius: 20px;
+}
+
+.rounded-sm {
+	border-radius: 5px;
+}
+
+/* Button properties */
+.btn-primary {
+	background: var(--primary-background);
+}
+
+.btn-secondary {
+	background: var(--secondary-text);
+}
+
+/* height properties */
+.h-full {
+	height: 100vh;
+}
+.h-80 {
+	height:80vh;
+}
+.h-90 {
+	height:90vh;
+}
+
+/* Width Properties */
+.w-100 {
+	width: 100%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-40 {
+	width: 40%;
+}
+.w-30{
+	width:30%
+}
+
+/* extra style */
+.cursor-pointer {
+	cursor: pointer;
+}
+
+/* font proverties */
+.font-semi-bold {
+	font-weight: 500;
+}
+
+/* margin properties */
+.py-10 {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}

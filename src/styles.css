@@ -13,6 +13,9 @@
 	--text-white: #ffffff;
 }
 
+body {
+	font-family: inherit;
+}
 .gradient-bg {
 	background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(178, 185, 184, 1) 64%);
 }
@@ -48,7 +51,7 @@
 }
 
 .text-md {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .text-sm {
@@ -115,6 +118,6 @@
 
 /* margin properties */
 .py-10 {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 85px;
+	padding-bottom: 85px;
 }

@@ -2,7 +2,7 @@
     width: 100%;
     object-position: center center;
     object-fit: cover;
-    background: #ffffff;
+    background: linear-gradient(160deg, rgba(189,219,158,1) 35%, rgba(237,250,166,1) 64%, rgba(232,238,232,1) 87%);;
     border-radius: 180px 180px 10px 10px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .about_section {
-    background: #4acdbf33;
+    background: #edfaa67d;
 }
 
 .shop_image_first {
@@ -25,8 +25,4 @@
 
 .shop_image_second {
     height: 416px;
-}
-
-.about_section {
-    background: #4acdbf33;
 }

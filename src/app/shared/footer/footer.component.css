@@ -1,0 +1,12 @@
+hr {
+    border: 1px solid var(--secondary-text)
+}
+
+.brand_name {
+    font-size: 36px;
+    letter-spacing: 25px
+}
+
+.footer_container {
+    margin: 0px 145px 0px 145px;
+}

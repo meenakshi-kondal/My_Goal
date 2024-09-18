@@ -62,9 +62,15 @@ body {
 .text-lg {
 	font-size: 40px;
 }
+.text-18 {
+	font-size:18px;
+}
 
 /* border properties */
 .rounded-full {
+	border-radius: 50%;
+}
+.rounded-md {
 	border-radius: 20px;
 }
 
@@ -88,14 +94,6 @@ body {
 
 .h-80 {
 	height: 80vh;
-}
-
-.h-90 {
-	height: 90vh;
-}
-
-.h-60 {
-	height: 60vh;
 }
 
 /* Width Properties */
@@ -129,4 +127,12 @@ body {
 .py-10 {
 	padding-top: 85px;
 	padding-bottom: 85px;
+}
+
+.position-absolute {
+	position: absolute;
+}
+
+.position-relative {
+	position: relative;
 }

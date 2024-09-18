@@ -10,78 +10,80 @@ import { Component } from '@angular/core';
 export class ProductsComponent {
   images = [
     {
-      url: 'suit.png',
+      url: '/products/suit.png',
       name: 'Suit-Salwar',
       type: 'Women',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'flayer.png',
+      url: '/products/flayer.png',
       name: 'Suit Circular Plazo',
       type: 'Women',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'pant-plazo.png',
+      url: '/products/pant-plazo.png',
       name: 'Suit Pant Plazo',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'sharara.png',
+      url: '/products/sharara.png',
       name: 'Suit Sharara',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'open-plazo.png',
+      url: '/products/open-plazo.png',
       name: 'Suit Open Plazo',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'anarkali.png',
+      url: '/products/anarkali.png',
       name: 'Anarkali',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'alia-cut.png',
+      url: '/products/alia-cut.png',
       name: 'Alia Cut Suit',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'kurti.png',
+      url: '/products/kurti.png',
       name: 'Kurti',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'garara.png',
+      url: '/products/garara.png',
       name: 'Gharara',
       type: 'Woman',
       price: '1200',
-      rate: '5'
+      rate: '5',
     },
     {
-      url: 'blouse.png',
+      url: '/products/blouse.png',
       name: 'Blouse',
       type: 'Woman',
       price: '1200',
-      rate: '5'
-    }
+      rate: '5',
+    },
   ];
   getStarsArray(rate: string): number[] {
     const numStars = parseInt(rate, 10);
-    return Array(numStars).fill(0).map((_, index) => index + 1);
+    return Array(numStars)
+      .fill(0)
+      .map((_, index) => index + 1);
   }
 }

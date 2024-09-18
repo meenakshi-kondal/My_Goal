@@ -4,7 +4,7 @@ class="{{isSignUp? 'gradient-bg' : 'gradient-bg-main'}}">
   <div class="d-flex p-3 bg-light rounded-sm w-40" [ngClass]="{ 'flex-row-reverse': isSignUp }">
     <div class="text-center bg-light w-50">
       <!-- content -->
-      <img width="25%" src="logo.png" alt="logo" />
+      <img width="25%" src="login/logo.png" alt="logo" />
 
       <!-- Input box -->
       <div class="mx-3">
@@ -34,9 +34,9 @@ class="{{isSignUp? 'gradient-bg' : 'gradient-bg-main'}}">
     <div class="{{ isSignUp ? 'gradient-bg-main' : 'gradient-bg' }} w-50 rounded-sm">
 
       @if (!isSignUp) {
-        <img width="100%" src="shopTogether.png" alt="shop_together" />
+        <img width="100%" src="login/shopTogether.png" alt="shop_together" />
       } @else {
-        <img width="100%" src="registration.png" alt="shop_together" />
+        <img class="register_image" src="/login/registration.png" alt="shop_together" />
       }
       
       

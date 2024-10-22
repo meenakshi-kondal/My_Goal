@@ -32,4 +32,12 @@
   overflow: visible;
  }
  
-   
+/* new */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}

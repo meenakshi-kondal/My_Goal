@@ -1,6 +1,6 @@
-.banner {
+.main_header {
 	background-image: url('../../../../public/shopping.jpg');
-	background-position: right;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -12,4 +12,7 @@
 
 .footer {
 	background-color: #000000d4;
+}
+.company_info {
+	background:linear-gradient(90deg, rgba(255,215,0,0.3253676470588235) 31%, rgba(192,57,43,0.5158438375350141) 69%)
 }

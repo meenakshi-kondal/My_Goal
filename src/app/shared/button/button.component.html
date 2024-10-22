@@ -1,6 +1,9 @@
 <button
 [class]="getClass()"
 class="p-2 fw-bold text-md"
+[ngClass]="[
+details.radius ? 'rounded-md' : ''
+]"
 >
 {{ details && details.value ?? 'Save' }}
 </button>

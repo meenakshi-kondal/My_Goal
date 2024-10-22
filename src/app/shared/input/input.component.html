@@ -1,1 +1,13 @@
-<input class="w-100 my-2 p-2 rounded-md text-main font-semi-bold"  [placeholder]="details.placeholder ?? ''">
+<input
+  [ngClass]="[
+    'w-100',
+    'my-2',
+    'p-2',
+    'text-main',
+    'font-semi-bold',
+    details.border ? 'darkContainer' : 'lightContainer',
+    details.radius ? 'rounded-md' : ''
+  ]"
+  [placeholder]="details.placeholder ?? ''"
+/>
+

@@ -1,52 +1,53 @@
 <div class="d-flex justify-content-center my-2">
   <div
-  id="carouselExampleIndicators"
-  class="carousel slide"
-  data-bs-ride="carousel" 
+    id="carouselExampleIndicators"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
   >
-  <img class="position-relative" src="/reviews/review-cloud.png" alt="First slide" />
-  
+    <img
+      class="position-relative"
+      src="/reviews/review-cloud.png"
+      alt="First slide"
+    />
+
     <div class="carousel-inner position-absolute images_container">
-      @for (data of reviewsList; track data;let i = $index) {
+      @for (data of reviewsList; track data; let i = $index) {
       <div class="carousel-item" [class.active]="i === currentSlide">
         <div class="overlay-content position-absolute d-flex w-100">
-
-          <div  class="userImage rounded-full">
-            <img
-              [src]="data.image"
-              alt="user-image"
-             
-            />
+          <div class="userImage rounded-full">
+            <img [src]="data.image" alt="user-image" />
           </div>
-       
-            <div class="review-text mx-5">
-              <div class="quote-symbol top-quote my-4">“</div> 
-              <p class="text-18">{{ data?.description }}</p>  
-              <div class="quote-symbol bottom-quote float-end my-4">”</div>
-           
-           </div>
-          
+          <div class="review-text mx-5">
+            <img alt="open-quote" src="/reviews/open-quote.png" width="10" class="quote-symbol top-quote my-4">
+            <p class="text-18">{{ data?.description }}</p>
+            <p class="text-18 mt-2 text-end">{{ data?.name }}</p>
+            <img alt="open-quote" src="/reviews/close-quote.png" width="10" class="quote-symbol bottom-quote float-end my-4">
+          </div>
         </div>
       </div>
       }
     </div>
-    <span
+
+    <!-- move slide button -->
+    <button
       class="carousel-control-prev"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
       (click)="moveSlide('previous')"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </span>
-    <span
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
       class="carousel-control-next"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
       (click)="moveSlide('next')"
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>

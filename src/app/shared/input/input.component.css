@@ -1,3 +1,8 @@
-input {
+.lightContainer {
     border: 2px solid var(--primary-background);
+    width:100%
+}
+.darkContainer {
+    border: 2px solid #000000d4;
+    width:100%
 }

@@ -1,5 +1,5 @@
 <div class="banner pb-0">
-  <div class="information d-flex">
+  <div class="information d-flex mb-5">
     <div class="col-lg-6 col-md-6 col-sm-12">
       <span class="title"> Join Our Growing Community </span>
     </div>
@@ -16,12 +16,15 @@
   </div>
 
   <!-- animated images -->
-   <div class="d-flex mt-5">
+   <div class="d-flex mt-5 justify-content-center">
     @for (data of company_info; track data; let i = $index) {
-        <div class="shop_image d-flex flex-column">
-            <span class="image_title">{{data.title}}</span>
-            <span class="image_title">{{data.count}}</span>
-            <img [src]="data.image" class="shop_image_first" />
+        <div class="shop_image d-flex flex-column justify-content-between" [style.background]="data.background">
+          <div class="dynamic_info">
+            <div class="image_title text-center mt-5">{{data.title}}</div>
+            <div class="image_title text-center">{{data.count}}</div>
+          </div>
+          
+            <img [src]="data.image" class="shop_image_first mt-5 px-3" />
           </div>
     }
    </div>

@@ -16,16 +16,43 @@
   </div>
 
   <!-- animated images -->
-   <div class="d-flex mt-5 justify-content-center">
+  <!-- <div class="d-flex mt-5 justify-content-center">
     @for (data of company_info; track data; let i = $index) {
         <div class="shop_image d-flex flex-column justify-content-between" [style.background]="data.background">
           <div class="dynamic_info">
             <div class="image_title text-center mt-5">{{data.title}}</div>
             <div class="image_title text-center">{{data.count}}</div>
           </div>
-          
-            <img [src]="data.image" class="shop_image_first mt-5 px-3" />
+      
+            <img [src]="data.image" class="shop_image_first mt-5 px-4" />
+       
           </div>
     }
-   </div>
+   </div> -->
+
+  <div class="main_content">
+    <div class="d-flex mt-5 justify-content-center">
+      @for (data of company_info; track data; let i = $index) {
+      <div class="static_div">
+        <div
+          class="shop_container d-flex flex-column justify-content-between"
+          [style.background]="data.background"
+        >
+          <div class="static_info">
+            <div class="image_title text-center mt-5">{{ data.title }}</div>
+            <div class="image_title text-center">{{ data.count }}</div>
+          </div>
+
+          <!-- <div class="image_wrapper"> -->
+          <img
+            [src]="data.image"
+            class="shop_image_first mt-5 px-4"
+            alt="Shop image"
+          />
+          <!-- </div> -->
+        </div>
+      </div>
+      }
+    </div>
+  </div>
 </div>

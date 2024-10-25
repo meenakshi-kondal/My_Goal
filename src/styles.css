@@ -136,6 +136,10 @@ body {
 	padding-bottom: 85px;
 }
 
+.mt-15 {
+	margin-top: 15rem;
+}
+
 .position-absolute {
 	position: absolute;
 }

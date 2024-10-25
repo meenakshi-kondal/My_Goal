@@ -151,3 +151,15 @@ body {
 .banner {
 	padding: 50px 135px;
 }
+
+@media (max-width: 992px) { /* Medium screens */
+    .banner {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        padding: 40px;
+    }
+}

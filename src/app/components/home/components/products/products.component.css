@@ -61,3 +61,17 @@
 .product-image:hover img {
   transform: scale(1.3); 
 }
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 992px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

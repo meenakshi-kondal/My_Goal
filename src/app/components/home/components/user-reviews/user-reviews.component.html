@@ -65,24 +65,48 @@
 
   <!-- showing only in medium and small screen -->
   <div
-    class="main_content_small d-lg-none d-flex justify-content-between flex-sm-column flex-md-row background_image"
+    class="banner main_content_small d-lg-none d-flex flex-sm-column flex-md-row background_image"
   >
-    <div class="reviews_content d-flex align-items-center justify-content-center">
-      @for (data of reviewsList; track data; let i = $index) {
-      <div class="review_border d-flex flex-column text-center">
-        <div class="text-center">
-          <img
-            [src]="data.image"
-            alt="user-image"
-            class="user_image rounded-full"
-          />
+    <div class="review_container">
+      <div class="d-flex align-items-center justify-content-center">
+        @for (data of reviewsList; track data; let i = $index) { @if (i ===
+        currentSlide) {
+        <div class="review_border d-flex flex-column text-center">
+          <div class="text-center min-height: 100vh;">
+            <img
+              [src]="data.image"
+              alt="user-image"
+              class="user_image rounded-full"
+            />
+          </div>
+
+          <p class="text-18 my-4">{{ data?.description }}</p>
+
+          <p class="text-18">-- {{ data?.name }} --</p>
         </div>
-
-        <p class="text-18">{{ data?.description }}</p>
-
-        <p class="text-18 mt-2">- {{ data?.name }} -</p>
+        } }
       </div>
-      }
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+        (click)="moveSlide('previous')"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+        (click)="moveSlide('next')"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </div>

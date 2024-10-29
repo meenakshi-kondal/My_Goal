@@ -1,7 +1,8 @@
-<div class="d-flex justify-content-center my-2">
+<div class="d-flex justify-content-center">
+  <!-- showing only in large screen -->
   <div
     id="carouselExampleIndicators"
-    class="carousel slide carousel-fade"
+    class="carousel slide carousel-fade d-none d-lg-block my-2"
     data-bs-ride="carousel"
   >
     <img
@@ -17,12 +18,22 @@
           <div class="userImage rounded-full">
             <img [src]="data.image" alt="user-image" />
           </div>
-          
+
           <div class="review-text mx-5">
-            <img alt="open-quote" src="/reviews/open-quote.png" width="10" class="quote-symbol top-quote my-4">
+            <img
+              alt="open-quote"
+              src="/reviews/open-quote.png"
+              width="10"
+              class="quote-symbol top-quote my-4"
+            />
             <p class="text-18">{{ data?.description }}</p>
             <p class="text-18 mt-2 text-end">{{ data?.name }}</p>
-            <img alt="open-quote" src="/reviews/close-quote.png" width="10" class="quote-symbol bottom-quote float-end my-4">
+            <img
+              alt="open-quote"
+              src="/reviews/close-quote.png"
+              width="10"
+              class="quote-symbol bottom-quote float-end my-4"
+            />
           </div>
         </div>
       </div>
@@ -50,5 +61,28 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
+
+  <!-- showing only in medium and small screen -->
+  <div
+    class="main_content_small d-lg-none d-flex justify-content-between flex-sm-column flex-md-row background_image"
+  >
+    <div class="reviews_content d-flex align-items-center justify-content-center">
+      @for (data of reviewsList; track data; let i = $index) {
+      <div class="review_border d-flex flex-column text-center">
+        <div class="text-center">
+          <img
+            [src]="data.image"
+            alt="user-image"
+            class="user_image rounded-full"
+          />
+        </div>
+
+        <p class="text-18">{{ data?.description }}</p>
+
+        <p class="text-18 mt-2">- {{ data?.name }} -</p>
+      </div>
+      }
+    </div>
   </div>
 </div>

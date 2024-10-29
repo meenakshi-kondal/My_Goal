@@ -1,4 +1,4 @@
-<div class="banner pb-0">
+<div class="banner pb-lg-0">
   <div class="information d-flex mb-5 flex-column flex-md-row">
     <div class="col-lg-6 col-md-6 col-sm-12">
       <span class="title"> Join Our Growing Community </span>
@@ -16,7 +16,8 @@
   </div>
 
   <!-- animated images -->
-  <div class="main_content">
+  <!-- showing only in large screen -->
+  <div class="main_content d-none d-lg-block">
     <div class="d-flex mt-5 justify-content-center">
       @for (data of company_info; track data; let i = $index) {
       <div class="static_div">
@@ -29,16 +30,31 @@
             <div class="image_title text-center">{{ data.count }}</div>
           </div>
 
-          <!-- <div class="image_wrapper"> -->
           <img
             [src]="data.image"
             class="shop_image_first mt-5 px-4"
             alt="Shop image"
           />
-          <!-- </div> -->
         </div>
       </div>
       }
     </div>
+  </div>
+
+  <!-- showing only in medium and small screen -->
+  <div
+    class="main_content_small d-lg-none d-flex flex-sm-column flex-md-row justify-content-between"
+  >
+    @for (data of company_info; track data; let i = $index) {
+    <div
+      [style.background]="data.background"
+      [style.--hover-color]="data.hoverColor"
+      class="p-2 w-100 w-md-35c moving-border"
+      [style.--border-color]="data.hoverColor" 
+    >
+      <div class="image_title text-center">{{ data.title }}</div>
+      <div class="image_title text-center">{{ data.count }}</div>
+    </div>
+    }
   </div>
 </div>

@@ -42,4 +42,5 @@ export class LoginComponent {
       this.loginInput.splice(0, 1);
     }
   }
+
 }

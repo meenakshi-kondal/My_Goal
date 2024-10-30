@@ -27,7 +27,7 @@
               class="quote-symbol top-quote my-4"
             />
             <p class="text-18">{{ data?.description }}</p>
-            <p class="text-18 mt-2 text-end">{{ data?.name }}</p>
+            <p class="text-18 mt-2 text-end">{{ data?.name}}</p>
             <img
               alt="open-quote"
               src="/reviews/close-quote.png"
@@ -70,7 +70,7 @@
     <div class="review_container">
       <div class="d-flex align-items-center justify-content-center">
         @for (data of reviewsList; track data; let i = $index) { @if (i ===
-        currentSlide) {
+        mediumSizeSlides) {
         <div class="review_border d-flex flex-column text-center">
           <div class="text-center min-height: 100vh;">
             <img
@@ -92,7 +92,7 @@
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
-        (click)="moveSlide('previous')"
+        (click)="moveMediumSizeSlide('previous')"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -102,7 +102,7 @@
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
-        (click)="moveSlide('next')"
+        (click)="moveMediumSizeSlide('next')"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>

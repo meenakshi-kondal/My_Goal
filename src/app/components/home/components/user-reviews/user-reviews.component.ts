@@ -42,6 +42,7 @@ export class UserReviewsComponent {
     },
   ];
   currentSlide = 0;
+  mediumSizeSlides = 0;
   carousel: any;
 
   ngOnInit() {
@@ -49,9 +50,9 @@ export class UserReviewsComponent {
     setTimeout(() => {
       const element = document.getElementById('carouselExampleIndicators');
       this.carousel = new bootstrap.Carousel(element, {
-        interval: 3000, // 2 seconds
+        interval: 3000,
         wrap: true,
-        ride: 'carousel'
+        ride: 'carousel',
       });
     });
   }
@@ -66,5 +67,8 @@ export class UserReviewsComponent {
         (this.currentSlide - 1 + this.reviewsList.length) %
         this.reviewsList.length;
     }
+  }
+  moveMediumSizeSlide(direction: 'next' | 'previous') {
+    this.mediumSizeSlides += direction === 'next' ? 1 : -1;
   }
 }

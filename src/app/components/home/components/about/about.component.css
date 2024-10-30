@@ -1,53 +1,57 @@
 .shop_image img {
-    width: 100%;
-    object-position: center center;
-    object-fit: cover;
-    background: linear-gradient(160deg, rgba(74, 205, 191, 0.4430147058823529) 40%, rgba(116, 39, 0, 0.34217436974789917) 73%);
-    border-radius: 180px 180px 10px 10px;
+  width: 100%;
+  object-position: center center;
+  object-fit: cover;
+  background: linear-gradient(160deg, rgba(74, 205, 191, 0.4430147058823529) 40%, rgba(116, 39, 0, 0.34217436974789917) 73%);
+  border-radius: 180px 180px 10px 10px;
 }
 
 .shop_image {
-    width: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about_section {
-    background: #81d4001c;
+  background: #81d4001c;
 }
 
 .shop_image_first {
-    height: 363px;
-    margin-top: 49px;
-    width: 200px;
+  height: 363px;
+  margin-top: 49px;
+  width: 200px;
 }
 
 .shop_image_second {
-    height: 416px;
+  height: 416px;
+}
+
+.content {
+  line-height: 2;
 }
 
 .typing-effect.active {
-    color: #742700;
-    font-size: 50px;
-    white-space: nowrap;
-    overflow: hidden;
+  color: #742700;
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(12, end) forwards;
+  border-right: none;
+  transition: width 2s steps(12, end);
+}
+
+.typing-effect.active {
+  width: 12ch;
+}
+
+@keyframes typing {
+  from {
     width: 0;
-    animation: typing 2s steps(12, end) forwards;
-    border-right: none;
-    transition: width 2s steps(12, end);
   }
-  
-  .typing-effect.active {
+
+  to {
     width: 12ch;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 12ch;
-    }
-  }
-  
+}

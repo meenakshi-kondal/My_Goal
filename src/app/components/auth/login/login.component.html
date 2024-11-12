@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-center align-items-center h-full"
 class="{{isSignUp? 'gradient-bg' : 'gradient-bg-main'}}">
 
-  <div class="d-flex p-3 bg-light rounded-sm w-40" [ngClass]="{ 'flex-row-reverse': isSignUp }">
-    <div class="text-center bg-light w-50">
+  <div class="d-flex p-3 bg-light rounded-sm" [ngClass]="{ 'flex-row-reverse': isSignUp }">
+    <div class="text-center bg-light col-lg-6">
       <!-- content -->
       <img width="25%" src="login/logo.png" alt="logo" />
 
@@ -31,15 +31,14 @@ class="{{isSignUp? 'gradient-bg' : 'gradient-bg-main'}}">
     </div>
 
     <!-- Image -->
-    <div class="{{ isSignUp ? 'gradient-bg-main' : 'gradient-bg' }} w-50 rounded-sm">
+    <div class="{{ isSignUp ? 'gradient-bg-main' : 'gradient-bg' }} col-lg-6 rounded-sm d-none d-lg-block">
 
       @if (!isSignUp) {
         <img width="100%" src="login/shopTogether.png" alt="shop_together" />
       } @else {
         <img class="register_image" src="/login/registration.png" alt="shop_together" />
       }
-      
-      
+          
     </div>
   </div>
 </div>

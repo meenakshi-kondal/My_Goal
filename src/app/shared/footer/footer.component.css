@@ -10,3 +10,9 @@ hr {
 .footer_container {
     margin: 0px 145px 0px 145px;
 }
+
+@media (max-width: 576px) {
+    .mediun-size-style {
+        margin-top: 3rem;
+    }
+}
